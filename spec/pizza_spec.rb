@@ -14,6 +14,7 @@ describe Pizza::Pie do
 
       expect(pizza.toppings).to eq(toppings)
     end
+
     it "defaults the toppings to cheese only, if the pizza has no toppings" do
       pizza= Pizza::Pie.new
 
@@ -30,6 +31,7 @@ describe Pizza::Topping do
 
       expect(topping.name).to eq('olives')
     end
+    
     it 'sets whether or not the topping is vegetarian' do
       topping = Pizza::Topping.new 'bell peppers', vegetarian: true
       expect(topping.vegetarian).to eq(true)
